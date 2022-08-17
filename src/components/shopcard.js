@@ -18,7 +18,7 @@ function Shopcard({calcuateTotalePrice}) {
         <div className='shop_image' align='center'>
           <img src={process.env.PUBLIC_URL+item.image} width={100}/>  
         </div>
-        <div>
+        <div className=''>
             <div className="shop_item_price">{(Math.round(item.price*item.quantity*100)/100).toFixed(2)} TND 
             <MdOutlineModeEditOutline onClick={handleShowedit} className='shop_icon' size={25}/>
             <RiDeleteBinLine className='shop_icon' size={25}

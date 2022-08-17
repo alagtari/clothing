@@ -13,7 +13,7 @@ function Editshopcard({show,handleClose,item}) {
         </Offcanvas.Header>
         <Offcanvas.Body >
         <div className='shop_image_edit' align='center'>
-          <img src={process.env.PUBLIC_URL+item.image} width={200}/>  
+          <img src={process.env.PUBLIC_URL+item.image} width={180}/>  
         </div>
         <div className='shop_edit_controls'>
           <div className="shop_item_price_edit">{item.price} TND </div>
@@ -22,7 +22,7 @@ function Editshopcard({show,handleClose,item}) {
         <div className='shop_edit_controls'>
           <div className="shop_item_price_edit">Taille</div>
           </div>  
-          <br/>
+          
           <div className='size_line'>
             <div className={selectedSize==='xs'?"size slected_size":"size"}
             onClick={()=>{
@@ -73,7 +73,7 @@ function Editshopcard({show,handleClose,item}) {
             }}
                size={22}/>
           </div>
-          <div className='shop_bottom' align='center'>
+          <div className='edit_bottom' align='center'>
             {counter>0?
              <div className='edit_button'
              onClick={()=>{

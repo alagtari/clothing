@@ -17,7 +17,7 @@ function Card({item}) {
           setHovred(false)
         }}
          >
-          <img src={process.env.PUBLIC_URL+item.image} className='image'/>
+          <img src={process.env.PUBLIC_URL+item.image} style={{width:item.category ==='Sans manches'&&'70%'}} className='image'/>
           {hoverd&&<Size sizes={item.sizes}/>}
 
         {liked?

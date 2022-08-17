@@ -7,7 +7,24 @@ import Shopcard from './shopcard';
 import { motion  } from "framer-motion";
 
 function Navbar({gender,changeGender,showGender,categories,setSelectedcategory,selectedcategory}) {
-    
+    function getWindowSize() {
+        const {innerWidth, innerHeight} = window;
+        return {innerWidth, innerHeight};
+    }
+    const [windowSize, setWindowSize] = useState(getWindowSize());
+
+    useEffect(() => {
+      function handleWindowResize() {
+        setWindowSize(getWindowSize());
+      }
+  
+      window.addEventListener('resize', handleWindowResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleWindowResize);
+      };
+    }, []);
+  
     const [scrolled, setScrolled] = useState(false);
     const [show, setShow] = useState(false);
     const [totalPrice, setTotalPrice] = useState(0);
@@ -47,11 +64,11 @@ function Navbar({gender,changeGender,showGender,categories,setSelectedcategory,s
           y:0,
           transition:{duration:0.7}
         }}
-        
+        style={{backgroundColor:!showGender&&'rgba(255,255,255,0)'}}
         className={scrolled?'navbar navbar_onscroll':'navbar '}>
-            <div className="part1">
-            <Link className="brand_name" to="/">Shoes Extra</Link>
-            {scrolled?
+            <div className="part1" align='center'>
+            <Link className="brand_name" to="/">Tshirt Extra</Link>
+            {scrolled&&(windowSize>800)?
             <>
             <span
             style={selectedcategory ==="toutes"?{fontWeight:700}:{fontWeight:300} } 

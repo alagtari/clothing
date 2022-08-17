@@ -1,7 +1,6 @@
 .navbar{
   position: absolute;
   display: flex;
-  flex-wrap: wrap;
   z-index: 1;
   top: 0;
   width: 100vw;
@@ -54,7 +53,7 @@
 }
 .part2{
   position: absolute;
-  right: 20px;
+  right: 10px;
   padding-top:1.3vw ;
 }
 .icons{
@@ -64,7 +63,7 @@
 .items{
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20vh;
+  margin-top: 30vh;
 }
 .card_by_4{
     position: relative;
@@ -156,15 +155,16 @@
 .shop_card{
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   margin-bottom: 15px;
 }
 .shop_image{
   width: 7vw;
   height: 8vw;
   background-color: rgb(240, 240, 240);
-  padding-top: 0.5vw;
+  padding-top: 0.8vw;
   border-radius: 10px;
+  margin-right: 10px;
+
 }
 .shop_item_price{
   margin-left:10px ;
@@ -173,11 +173,16 @@
   font-weight: 800;
 }
 .shop_item_title{
+  width: 50%;
   margin-left:10px ;
   font-size: 0.9rem;
+  overflow-wrap: break-word;
 }
 .shop_icon{
   margin: 0 10px;
+}
+.shop_infos{
+  width: 50px;
 }
 .shop_item_infos{
   margin-left:10px ;
@@ -251,6 +256,9 @@ font-weight: 700;
   margin-left: 30px;
   margin-right: 30px;
 }
+.edit_bottom{
+  margin-top: 10vh;
+}
 .edit_button{
   width: 90%;
   height: 50px;
@@ -315,4 +323,143 @@ font-weight: 700;
 .detail_image{
   margin-top: 10%;
   width: 60%;
+}
+@media only screen and (max-width : 768px){
+  .navbar{
+    position: fixed;
+    margin-left:0;
+    padding-top:20px ;
+    height: 10vh;
+    background-color: rgb(255, 255, 255); 
+  }
+  .navbar_onscroll{
+  }
+  .brand_name{
+    font-size: 1.2rem;
+    margin-left: 10px;
+    margin-right: 0;
+  }
+  .active_gender{
+    margin-left: 5px;   
+  }
+  .inactive_gender{
+    margin-left: 5px;
+  }
+  .icons{
+    margin-right: 8px;
+  }
+  .items{
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10vh;
+    width: 100vw;
+  }
+  .item{
+    width: 50vw;
+  }
+  .card_by_4{
+    position: relative;
+    width: 49vw;
+    height: 60vw;
+    margin: 0.4vw;
+}
+.image{
+  width: 35vw;
+}
+.details{
+  display: null;
+  flex-wrap: null;
+}
+.details_controls{
+  width: 100%;
+  height: 50%;
+  padding-left: 5%;
+  padding-top: 10%;
+
+}
+.details_image{
+  width: 100%;
+  height: 50%;
+  background-color: rgb(240, 240, 240);
+}
+.detail_title{
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.detail_price{
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.detail_taille{
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.detail_size{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.dtails_button{
+  width: 92%;
+
+}
+.detail_image{
+  margin-top: 10%;
+  width: 60%;
+}
+.shop_card{
+  width: 100vw;
+  display: flex;
+  margin-bottom: 15px;
+}
+.shop_image{
+  width: 40vw;
+  height: 38vw;
+  background-color: rgb(240, 240, 240);
+}
+.shop_cards{
+  height: 75%;
+ overflow-y: scroll;
+ 
+}
+.shop_info{
+  margin-right: 50%;
+ }
+.shop_bottom{
+  width: 100%;
+  margin-top: 15%;
+}
+.shop_button{
+   width: 90%;
+}
+.shop_image_edit{
+  width: 80vw;
+  height: 37vh;
+  padding-top: 2vh;
+  margin-left: 4vw;
+}
+.shop_edit_controls{
+  margin-top: 15px;
+  margin-left: 4vw;
+}
+.size_line{
+  margin-top: 10px;
+}
+.shop_item_title{
+  width: 90%;
+  margin-left: 4vw;
+  font-size: 0.9rem;
+}
+.quantite{
+  margin-top: 10px;
+  padding-top:9px ;
+}
+.edit_bottom{
+  margin-top: 2vh;
+}
+
 }

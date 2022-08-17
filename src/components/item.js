@@ -11,7 +11,7 @@ function Item({item}) {
         initial={{
           opacity:0,
           y:100
-        }} viewport={{once:true}}
+        }} 
         whileInView={{
           opacity:1,
           y:0,
@@ -26,7 +26,7 @@ function Item({item}) {
         >
         <Card item={item}/>
         <div className="item_title">{item.name}</div>
-        <div className="item_price">29,99 TND</div>
+        <div className="item_price">{Number(item.price).toFixed(2)} TND</div>
         </motion.div>
      );
 }
