@@ -13,5 +13,5 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TSHIRT__EXTRA }}'
-          projectId: tshirt--extra
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TSHIRT_EXTRA }}'
+          projectId: tshirt-extra

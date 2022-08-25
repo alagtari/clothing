@@ -1,8 +1,11 @@
 import { motion  } from "framer-motion";
-
+import { useState } from "react";
 function Size({sizes}) {
+  const [width,setWidth] = useState(window.innerWidth)
+ 
     return ( 
         <motion.div 
+        style={{display:width<768&&'none'}}
         initial={{
          opacity:0
        }} viewport={{once:true}}

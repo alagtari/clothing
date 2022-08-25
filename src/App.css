@@ -349,7 +349,6 @@ font-weight: 700;
     margin-right: 8px;
   }
   .items{
-    overflow-x: hidden;
     display: flex;
     flex-wrap: wrap;
     margin-top: 10vh;
@@ -379,8 +378,9 @@ font-weight: 700;
 
 }
 .details_image{
+  padding-top: 5vh;
   width: 100%;
-  height: 50%;
+  height: 45%;
   background-color: rgb(240, 240, 240);
 }
 .detail_title{
@@ -409,7 +409,7 @@ font-weight: 700;
 }
 .detail_image{
   margin-top: 10%;
-  width: 60%;
+  width: 50%;
 }
 .shop_card{
   width: 100vw;
@@ -437,10 +437,10 @@ font-weight: 700;
    width: 90%;
 }
 .shop_image_edit{
-  width: 80vw;
-  height: 37vh;
+  margin-left: 15vw;
+  width: 60vw;
+  height: 32vh;
   padding-top: 2vh;
-  margin-left: 4vw;
 }
 .shop_edit_controls{
   margin-top: 15px;

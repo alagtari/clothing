@@ -1,6 +1,11 @@
 import { useState } from 'react';
+import Toast from 'react-bootstrap/Toast';
+import ToastContainer from 'react-bootstrap/ToastContainer';
+import {MdOutlineCheckCircle} from 'react-icons/md'
+
 function Itemdetails({item}) {
     const [selectedSize,setSelectedSize] = useState(null)
+    const [show, setShow] = useState(false);
     const [BtnText,setBtnText] = useState("AJOUTER AU PANIER")
     return ( 
         <div className="details">
@@ -78,6 +83,7 @@ function Itemdetails({item}) {
                 item.quantity = 1
                 shop.push(item)
                 localStorage.setItem('shop',JSON.stringify(shop)) 
+                setShow(true)
               } else {
                 let shop =[]
                 item.size = selectedSize
@@ -91,6 +97,22 @@ function Itemdetails({item}) {
          {BtnText}
          </div>
          </div>
+         <ToastContainer className="p-3" position={'top-end'} >
+            <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide >
+            <Toast.Header>
+                <img
+                src="holder.js/20x20?text=%20"
+                className="rounded me-2"
+                alt=""
+                />
+                <strong className="me-auto"></strong>
+                <small>il y a 1 seconde</small>
+            </Toast.Header>
+            <Toast.Body>Ajouté au panier <MdOutlineCheckCircle color='	#32CD32' size={18}/></Toast.Body>
+            </Toast>
+         </ToastContainer>
+         
+
         </div>
      );
 }

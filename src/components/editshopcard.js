@@ -13,7 +13,7 @@ function Editshopcard({show,handleClose,item}) {
         </Offcanvas.Header>
         <Offcanvas.Body >
         <div className='shop_image_edit' align='center'>
-          <img src={process.env.PUBLIC_URL+item.image} width={180}/>  
+          <img src={process.env.PUBLIC_URL+item.image} width={160}/>  
         </div>
         <div className='shop_edit_controls'>
           <div className="shop_item_price_edit">{item.price} TND </div>
